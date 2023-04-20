@@ -81,15 +81,15 @@ $rg = (New-AzResourceGroup -Name AksHciAzureEval -Location "East US" -Force).Res
 
 ###we need to declare the ID, Secrets etc before running the Set-AksHciRegistration, it's required as we're using Service PRincipal
 
-$azureAplicationId ="49f623eb-b114-43a2-ad70-5ea07f1f03f1"
-$azureTenantId= "18a59a81-eea8-4c30-948a-d8824cdc2580"
-$azurePassword = ConvertTo-SecureString "2uL8Q~~XfpgdK9K1FsdVK4BFw33sbNEbiHCMbdei" -AsPlainText -Force
+$azureAplicationId ="49f623eb-b114-XXXXXXXXXXXXXXXXXXXXXXX"
+$azureTenantId= "18a59a81-XXXXXXXXXXXXXXXXXXX80"
+$azurePassword = ConvertTo-SecureString "2uLCCCCCCCCCXXXXXXXXXXbdei" -AsPlainText -Force
 $psCred = New-Object System.Management.Automation.PSCredential($azureAplicationId , $azurePassword)
 Connect-AzAccount -Credential $psCred -TenantId $azureTenantId  -ServicePrincipal 
 
-$sub="c4af9cc0-a3c0-46ac-ae12-8be76ca1506e"
+$sub="c4af9XXXXXXXXXXXXXXXXXXXXXX-8be76ca1506e"
 $rg="AksHciAzureEval"
-$tenant="18a59a81-eea8-4c30-948a-d8824cdc2580"
+$tenant="18a59a8XXXXXXXXXXXXXXXXX-d8824cdc2580"
 
 
 
